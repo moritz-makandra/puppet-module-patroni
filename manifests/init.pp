@@ -192,6 +192,10 @@
 #   Refer to REST API configuration `cafile` setting
 # @param restapi_verify_client
 #   Refer to REST API configuration `verify_client` setting
+# @param restapi_allowlsit
+#   Refer to REST API configuration `allowlist` setting
+# @param restapi_allowlist_include_members
+#   Refer to REST API configuration `allowlist_include_members` setting
 # @param use_zookeeper
 #   Boolean to enable Zookeeper configuration storage
 # @param zookeeper_hosts
@@ -356,6 +360,8 @@ class patroni (
   Variant[Undef,String] $restapi_keyfile = undef,
   Optional[String] $restapi_cafile = undef,
   Optional[Enum['none','optional','required']] $restapi_verify_client = undef,
+  Optional[Boolean] $restapi_allowlist_include_members = undef,
+  Optional[Array] $restapi_allowlist = undef,
 
   # ZooKeeper Settings
   Boolean $use_zookeeper = false,

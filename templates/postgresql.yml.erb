@@ -161,6 +161,15 @@ restapi:
     username: <%= @restapi_username %>
     password: <%= @restapi_password %>
 <% end -%>
+<% if @restapi_allowlist_include_members != nil -%>>
+  allowlist_include_members: <%= @allowlist_include_members %>
+<% end -%>
+<% if @restapi_allowlist != nil -%>
+ allowlist:
+<% @restapi_allowlist.each do |host| -%>
+   - <%= host%>
+<% end -%>
+<% end -%>
 
 watchdog:
   mode: <%= @watchdog_mode %>
