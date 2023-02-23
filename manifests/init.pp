@@ -14,8 +14,8 @@
 #   Refer to Patroni Dynamic Configuration Settings `retry_timeout` setting
 # @param dcs_maximum_lag_on_failover
 #   Refer to Patroni Dynamic Configuration Settings `maximum_lag_on_failover` setting
-# @param dcs_master_start_timeout
-#   Refer to Patroni Dynamic Configuration Settings `master_start_timeout` setting
+# @param dcs_primary_start_timeout
+#   Refer to Patroni Dynamic Configuration Settings `primary_start_timeout` setting
 # @param dcs_synchronous_mode
 #   Refer to Patroni Dynamic Configuration Settings `synchronous_mode` setting
 # @param dcs_synchronous_mode_strict
@@ -252,7 +252,7 @@ class patroni (
   Integer $dcs_ttl = 30,
   Integer $dcs_retry_timeout = 10,
   Integer $dcs_maximum_lag_on_failover = 1048576,
-  Integer $dcs_master_start_timeout = 300,
+  Integer $dcs_primary_start_timeout = 300,
   Boolean $dcs_synchronous_mode = false,
   Boolean $dcs_synchronous_mode_strict = false,
   Boolean $dcs_postgresql_use_pg_rewind = true,
